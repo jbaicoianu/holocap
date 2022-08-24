@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "Stabil Grotesk";
+  src:
+    url(fonts/StabilGrotesk-Regular.woff2) format("woff2"),
+    url(fonts/StabilGrotesk-Regular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Stabil Grotesk";
+}
+holocap-capture {
+  display: block;
+  padding-right: 23em;
+}
+holocap-session {
+  display: inline-block;
+  border: 1px solid #999;
+  padding: .5em;
+  margin: .5em;
+  cursor: pointer;
+  font-family: "Stabil Grotesk";
+  width: 20em;
+  height: 20em;
+
+}
+holocap-session[active] {
+  background: #dfd;
+}
+holocap-session h2 {
+  margin: 0;
+}
+holocap-session h3 {
+  margin: 0;
+  font-weight: normal;
+  font-size: .8em;
+  color: #aaa;
+  display: none;
+}
+holocap-session p {
+  margin: 0;
+}
+holocap-capture video {
+  display: block;
+  margin: 1em auto;
+  width: 100%;
+  max-height: 80vh;
+}
+holocap-session .qrcode {
+  display: none;
+}
+holocap-session[active] .qrcode {
+  display: block;
+  margin: 0 auto;
+  width: 256px;
+  height: 256px;
+}
+holocap-session-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 21em);
+  grid-gap: .5px;
+  flex: 1;
+  overflow: auto;
+}
+holocap-session-list button {
+  
+}
+holocap-capture nav {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0 1em;
+  z-index: 10;
+  background: #eee;
+  box-shadow: -2px 0 5px black;
+}
+holocap-capture nav holocap-session-list {
+  flex: 1;
+}
+holocap-capture nav button {
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+}
+holocap-session-list>strong {
+  margin: 20vh auto;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: normal;
+  display: block;
+}
+button#snap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 2em;
+  padding: 1em;
+  font-weight: bold;
+}
+holocap-session-create {
+  display: flex;
+}
+holocap-session-create simple-prompt {
+  order: 1;
+  display: block;
+  flex: 1;
+}
+holocap-session-create simple-prompt input {
+  font-size: 3em;
+  padding: .5em;
+  width: 60vw;
+}
+holocap-session-create button {
+  order: 2;
+}
+holocap-capture.flash video {
+  animation: flash 350ms;  
+}
+@keyframes flash {
+ 0% { opacity: .3; }
+ 100% { opacity: 1; }
+}
+
